@@ -12,7 +12,11 @@
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icon-192.png">
 <title>STAGECRAFT</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Courier+Prime:wght@400;700&family=Crimson+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair
+
++Display:ital,wght@0,700;0,900;1,400&family=Courier+Prime:wght@400;700&family=Crimson
+
++Pro:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 :root {
   --bg:     #0a0805;
@@ -32,111 +36,199 @@
   --safe-bot: env(safe-area-inset-bottom, 0px);
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(--text);font-family:'Crimson Pro',serif;touch-action:manipulation}
-body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:.5}
+html,body{height:100%;width:100%;overflow:hidden;background:var(--bg);color:var(--text);font-family:'Crimson 
+
+Pro',serif;touch-action:manipulation}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 
+
+200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' 
+
+baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' 
+
+filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:.5}
 
 /* ── AUTH SCREEN ── */
-.auth-screen{position:fixed;inset:0;background:var(--bg);z-index:800;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px}
+.auth-screen{position:fixed;inset:0;background:var(--bg);z-index:800;display:flex;flex-direction:column;align-
+
+items:center;justify-content:center;padding:24px}
 .auth-screen.hidden{display:none}
-.auth-logo{font-family:'Playfair Display',serif;font-size:32px;font-weight:900;letter-spacing:8px;color:var(--gold2);text-shadow:0 0 30px rgba(201,168,76,.3);margin-bottom:6px;text-align:center}
+.auth-logo{font-family:'Playfair Display',serif;font-size:32px;font-weight:900;letter-spacing:8px;color:var(--
+
+gold2);text-shadow:0 0 30px rgba(201,168,76,.3);margin-bottom:6px;text-align:center}
 .auth-logo span{color:var(--red2)}
-.auth-tagline{font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:3px;color:var(--muted);text-transform:uppercase;margin-bottom:40px;text-align:center}
-.auth-card{width:100%;max-width:360px;background:var(--bg3);border:1px solid var(--bdr2);border-top:2px solid var(--gold);padding:28px 24px}
+.auth-tagline{font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:3px;color:var(--muted);text-
+
+transform:uppercase;margin-bottom:40px;text-align:center}
+.auth-card{width:100%;max-width:360px;background:var(--bg3);border:1px solid var(--bdr2);border-top:2px solid 
+
+var(--gold);padding:28px 24px}
 .auth-tabs{display:flex;margin-bottom:24px;border-bottom:1px solid var(--border)}
-.auth-tab{flex:1;padding:10px;font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);background:none;border:none;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;margin-bottom:-1px}
+.auth-tab{flex:1;padding:10px;font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:2px;text-
+
+transform:uppercase;color:var(--muted);background:none;border:none;cursor:pointer;border-bottom:2px solid 
+
+transparent;transition:all .2s;margin-bottom:-1px}
 .auth-tab.active{color:var(--gold);border-bottom-color:var(--gold)}
 .auth-form{display:flex;flex-direction:column;gap:0}
 .auth-form.hidden{display:none}
 .auth-field{margin-bottom:14px}
-.auth-label{display:block;font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-.auth-input{width:100%;background:var(--bg);border:1px solid var(--bdr2);padding:11px 14px;color:var(--text);font-family:'Crimson Pro',serif;font-size:16px;outline:none;transition:border-color .2s}
+.auth-label{display:block;font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:2px;text-
+
+transform:uppercase;color:var(--muted);margin-bottom:6px}
+.auth-input{width:100%;background:var(--bg);border:1px solid var(--bdr2);padding:11px 14px;color:var(--
+
+text);font-family:'Crimson Pro',serif;font-size:16px;outline:none;transition:border-color .2s}
 .auth-input:focus{border-color:var(--gold)}
-.auth-btn{width:100%;background:var(--gold);border:none;color:var(--bg);padding:13px;font-family:'Playfair Display',serif;font-size:15px;font-weight:700;letter-spacing:2px;cursor:pointer;transition:all .2s;margin-top:4px}
+.auth-btn{width:100%;background:var(--gold);border:none;color:var(--bg);padding:13px;font-family:'Playfair 
+
+Display',serif;font-size:15px;font-weight:700;letter-spacing:2px;cursor:pointer;transition:all .2s;margin-
+
+top:4px}
 .auth-btn:active{background:var(--gold2)}
 .auth-btn:disabled{opacity:.4;cursor:not-allowed}
-.auth-err{font-family:'Courier Prime',monospace;font-size:10px;color:var(--red2);letter-spacing:1px;text-align:center;margin-top:10px;min-height:16px}
-.auth-loading{font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:2px;color:var(--muted);text-align:center;margin-top:10px;text-transform:uppercase}
+.auth-err{font-family:'Courier Prime',monospace;font-size:10px;color:var(--red2);letter-spacing:1px;text-
+
+align:center;margin-top:10px;min-height:16px}
+.auth-loading{font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:2px;color:var(--muted);text-
+
+align:center;margin-top:10px;text-transform:uppercase}
 
 /* ── APP ── */
 .app{display:flex;flex-direction:column;height:100%;padding-top:var(--safe-top);padding-bottom:var(--safe-bot)}
 .app.hidden{display:none}
 
 /* ── TOPBAR ── */
-.topbar{flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;background:var(--bg2);border-bottom:1px solid var(--bdr2);position:relative;z-index:10}
-.topbar::after{content:'';position:absolute;bottom:0;left:16px;right:16px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.35}
-.app-logo{font-family:'Playfair Display',serif;font-size:20px;font-weight:900;letter-spacing:5px;color:var(--gold2);text-shadow:0 0 20px rgba(201,168,76,.3)}
+.topbar{flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:10px 
+
+16px;background:var(--bg2);border-bottom:1px solid var(--bdr2);position:relative;z-index:10}
+.topbar::after{content:'';position:absolute;bottom:0;left:16px;right:16px;height:1px;background:linear-gradient
+
+(90deg,transparent,var(--gold),transparent);opacity:.35}
+.app-logo{font-family:'Playfair Display',serif;font-size:20px;font-weight:900;letter-spacing:5px;color:var(--
+
+gold2);text-shadow:0 0 20px rgba(201,168,76,.3)}
 .app-logo span{color:var(--red2)}
 .topbar-right{display:flex;align-items:center;gap:10px}
 .vol-row{display:flex;align-items:center;gap:6px}
 .vol-label{font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:2px;color:var(--muted)}
 input[type=range]{-webkit-appearance:none;height:3px;background:var(--bdr2);outline:none;cursor:pointer}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;background:var(--gold);border-radius:50%}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;background:var(--
+
+gold);border-radius:50%}
 #masterVol{width:60px}
-.stop-all-btn{background:var(--red);border:1px solid var(--red2);color:#fff;font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:1px;padding:6px 10px;cursor:pointer;transition:all .2s}
+.stop-all-btn{background:var(--red);border:1px solid var(--red2);color:#fff;font-family:'Courier 
+
+Prime',monospace;font-size:10px;letter-spacing:1px;padding:6px 10px;cursor:pointer;transition:all .2s}
 .stop-all-btn:active{background:var(--red2);transform:scale(.96)}
-.user-btn{background:none;border:1px solid var(--border);color:var(--muted);font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:1px;padding:6px 10px;cursor:pointer;transition:all .2s;text-transform:uppercase}
+.user-btn{background:none;border:1px solid var(--border);color:var(--muted);font-family:'Courier 
+
+Prime',monospace;font-size:9px;letter-spacing:1px;padding:6px 10px;cursor:pointer;transition:all .2s;text-
+
+transform:uppercase}
 .user-btn:active{border-color:var(--gold);color:var(--gold)}
 
 /* ── SUPABASE INDICATOR ── */
-.sb-indicator{display:flex;align-items:center;gap:5px;padding:4px 8px;border:1px solid var(--border);background:var(--bg)}
+.sb-indicator{display:flex;align-items:center;gap:5px;padding:4px 8px;border:1px solid var(--
+
+border);background:var(--bg)}
 .sb-dot{width:6px;height:6px;border-radius:50%;background:var(--muted);transition:all .4s}
 .sb-dot.ok{background:var(--green2);box-shadow:0 0 6px var(--green2)}
 .sb-dot.err{background:var(--red2);box-shadow:0 0 6px var(--red2)}
-.sb-dot.loading{background:var(--gold);box-shadow:0 0 6px var(--gold);animation:sb-pulse .8s ease-in-out infinite}
+.sb-dot.loading{background:var(--gold);box-shadow:0 0 6px var(--gold);animation:sb-pulse .8s ease-in-out 
+
+infinite}
 @keyframes sb-pulse{0%,100%{opacity:1}50%{opacity:.3}}
-.sb-label{font-family:'Courier Prime',monospace;font-size:8px;letter-spacing:1px;color:var(--muted);text-transform:uppercase}
+.sb-label{font-family:'Courier Prime',monospace;font-size:8px;letter-spacing:1px;color:var(--muted);text-
+
+transform:uppercase}
 
 /* ── TABS ── */
 .tabs{flex-shrink:0;display:flex;background:var(--bg2);border-bottom:1px solid var(--border)}
-.tab{flex:1;padding:10px 4px;font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);background:none;border:none;cursor:pointer;transition:all .2s;border-bottom:2px solid transparent;display:flex;flex-direction:column;align-items:center;gap:3px}
+.tab{flex:1;padding:10px 4px;font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:2px;text-
+
+transform:uppercase;color:var(--muted);background:none;border:none;cursor:pointer;transition:all .2s;border-
+
+bottom:2px solid transparent;display:flex;flex-direction:column;align-items:center;gap:3px}
 .tab .tab-icon{font-size:16px}
 .tab.active{color:var(--gold);border-bottom-color:var(--gold)}
 
 /* ── PAGES ── */
 .pages{flex:1;overflow:hidden;position:relative}
-.page{position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;display:none;flex-direction:column;-webkit-overflow-scrolling:touch}
+.page{position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;display:none;flex-direction:column;-webkit-
+
+overflow-scrolling:touch}
 .page.active{display:flex}
 .page::-webkit-scrollbar{display:none}
 
 /* ── LIBRARY PAGE ── */
 .upload-page{padding:16px;gap:16px}
-.upload-zone{border:1px dashed var(--bdr2);border-radius:6px;padding:28px 16px;text-align:center;cursor:pointer;transition:all .3s;background:var(--bg2)}
+.upload-zone{border:1px dashed var(--bdr2);border-radius:6px;padding:28px 16px;text-
+
+align:center;cursor:pointer;transition:all .3s;background:var(--bg2)}
 .upload-zone.dragover{border-color:var(--gold);background:rgba(201,168,76,.04)}
 .upload-zone-icon{font-size:36px;margin-bottom:10px;display:block}
 .upload-zone-title{font-family:'Playfair Display',serif;font-size:16px;color:var(--gold);margin-bottom:6px}
-.upload-zone-sub{font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
+.upload-zone-sub{font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:2px;color:var(--
+
+muted);text-transform:uppercase}
 #fileInput{display:none}
 .lib-header{display:flex;align-items:center;justify-content:space-between;padding:0 4px}
-.lib-title{font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:3px;color:var(--gold);text-transform:uppercase}
+.lib-title{font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:3px;color:var(--gold);text-
+
+transform:uppercase}
 .lib-count{font-family:'Courier Prime',monospace;font-size:9px;color:var(--muted);letter-spacing:1px}
 .lib-list{display:flex;flex-direction:column;gap:8px}
-.lib-item{display:flex;align-items:center;gap:10px;padding:12px;background:var(--bg2);border:1px solid var(--border);transition:all .2s}
+.lib-item{display:flex;align-items:center;gap:10px;padding:12px;background:var(--bg2);border:1px solid var(--
+
+border);transition:all .2s}
 .lib-item-color{width:4px;height:40px;border-radius:2px;flex-shrink:0}
 .lib-item-info{flex:1;min-width:0}
-.lib-item-name{font-size:15px;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:2px}
+.lib-item-name{font-size:15px;color:var(--text);white-space:nowrap;overflow:hidden;text-
+
+overflow:ellipsis;margin-bottom:2px}
 .lib-item-meta{font-family:'Courier Prime',monospace;font-size:9px;color:var(--muted);letter-spacing:1px}
-.lib-item-trim{font-family:'Courier Prime',monospace;font-size:9px;color:var(--gold);letter-spacing:1px;margin-top:2px}
+.lib-item-trim{font-family:'Courier Prime',monospace;font-size:9px;color:var(--gold);letter-spacing:1px;margin-
+
+top:2px}
 .lib-item-actions{display:flex;gap:6px}
-.btn-icon{background:none;border:1px solid var(--border);color:var(--muted);padding:6px 10px;font-size:13px;cursor:pointer;transition:all .2s}
+.btn-icon{background:none;border:1px solid var(--border);color:var(--muted);padding:6px 10px;font-
+
+size:13px;cursor:pointer;transition:all .2s}
 .btn-icon:active{color:var(--gold);border-color:var(--gold)}
 .btn-icon.danger:active{color:var(--red2);border-color:var(--red2)}
 .lib-empty{text-align:center;padding:32px 16px;opacity:.4}
 .lib-empty-icon{font-size:32px;margin-bottom:8px}
-.lib-empty-text{font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
+.lib-empty-text{font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:2px;color:var(--
+
+muted);text-transform:uppercase}
 
 /* ── STAGE PAGE ── */
 .stage-page{padding:12px;gap:12px}
 .mode-bar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.mode-btn{flex:1;min-width:80px;background:var(--bg3);border:1px solid var(--bdr2);color:var(--text);padding:9px 8px;font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s;text-align:center}
-.mode-btn.active{background:var(--gold);border-color:var(--gold);color:var(--bg);box-shadow:0 0 12px rgba(201,168,76,.3)}
-.mode-indicator{font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:2px;color:var(--gold);padding:4px 8px;border:1px solid rgba(201,168,76,.25);background:rgba(201,168,76,.05);text-transform:uppercase;white-space:nowrap}
-.stage-grid-title{font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:3px;color:var(--muted);text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.mode-btn{flex:1;min-width:80px;background:var(--bg3);border:1px solid var(--bdr2);color:var(--text);padding:9px 
+
+8px;font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:2px;text-
+
+transform:uppercase;cursor:pointer;transition:all .2s;text-align:center}
+.mode-btn.active{background:var(--gold);border-color:var(--gold);color:var(--bg);box-shadow:0 0 12px rgba
+
+(201,168,76,.3)}
+.mode-indicator{font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:2px;color:var(--
+
+gold);padding:4px 8px;border:1px solid rgba(201,168,76,.25);background:rgba(201,168,76,.05);text-
+
+transform:uppercase;white-space:nowrap}
+.stage-grid-title{font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:3px;color:var(--
+
+muted);text-transform:uppercase;display:flex;align-items:center;gap:10px}
 .stage-grid-title::after{content:'';flex:1;height:1px;background:var(--border)}
 .btn-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
 
 /* ── FOLDER SYSTEM ── */
 .folder-section{margin-bottom:16px}
-.folder-header{display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--bg2);border:1px solid var(--bdr2);cursor:pointer;transition:all .2s;user-select:none}
+.folder-header{display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--bg2);border:1px solid 
+
+var(--bdr2);cursor:pointer;transition:all .2s;user-select:none}
 .folder-header:active{border-color:var(--gold)}
 .folder-color-bar{width:3px;height:28px;border-radius:2px;flex-shrink:0}
 .folder-icon{font-size:16px;transition:transform .2s}
@@ -147,25 +239,41 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;heigh
 .folder-body{overflow:hidden;transition:max-height .3s ease;max-height:0}
 .folder-body.open{max-height:2000px}
 .folder-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:10px 0 0 0}
-.folder-add-btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:10px;border:1px dashed var(--bdr2);background:none;color:var(--muted);font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s;width:100%;margin-top:8px}
+.folder-add-btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:10px;border:1px dashed 
+
+var(--bdr2);background:none;color:var(--muted);font-family:'Courier Prime',monospace;font-size:9px;letter-
+
+spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s;width:100%;margin-top:8px}
 .folder-add-btn:active{border-color:var(--gold);color:var(--gold)}
 .unfiled-section{margin-top:8px}
 
 /* ── AUDIO BUTTON ── */
-.audio-btn{position:relative;border:none;padding:0;cursor:pointer;background:none;text-align:left;outline:none;-webkit-tap-highlight-color:transparent;transition:transform .1s}
+.audio-btn{position:relative;border:none;padding:0;cursor:pointer;background:none;text-
+
+align:left;outline:none;-webkit-tap-highlight-color:transparent;transition:transform .1s}
 .audio-btn:active{transform:scale(.97)}
-.audio-btn-inner{padding:14px 14px 10px;border:1px solid var(--bdr2);background:var(--bg2);transition:all .15s;position:relative;overflow:hidden}
-.audio-btn.playing .audio-btn-inner{border-color:var(--btn-color,var(--gold));background:rgba(201,168,76,.05);box-shadow:0 0 0 1px var(--btn-color,var(--gold))}
+.audio-btn-inner{padding:14px 14px 10px;border:1px solid var(--bdr2);background:var(--bg2);transition:all 
+
+.15s;position:relative;overflow:hidden}
+.audio-btn.playing .audio-btn-inner{border-color:var(--btn-color,var(--gold));background:rgba
+
+(201,168,76,.05);box-shadow:0 0 0 1px var(--btn-color,var(--gold))}
 .audio-btn.looping .audio-btn-inner{animation:pulse-bdr 1.4s ease-in-out infinite}
-@keyframes pulse-bdr{0%,100%{box-shadow:0 0 0 1px var(--btn-color,var(--gold)),0 0 8px rgba(201,168,76,.1)}50%{box-shadow:0 0 0 2px var(--btn-color,var(--gold)),0 0 20px rgba(201,168,76,.3)}}
+@keyframes pulse-bdr{0%,100%{box-shadow:0 0 0 1px var(--btn-color,var(--gold)),0 0 8px rgba(201,168,76,.1)}
+
+50%{box-shadow:0 0 0 2px var(--btn-color,var(--gold)),0 0 20px rgba(201,168,76,.3)}}
 .btn-color-bar{position:absolute;top:0;left:0;right:0;height:3px;background:var(--btn-color,var(--gold))}
 .btn-num-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
 .btn-num{font-family:'Courier Prime',monospace;font-size:9px;color:var(--muted);letter-spacing:2px}
 .btn-status-dot{width:5px;height:5px;border-radius:50%;background:var(--muted);transition:all .2s}
 .audio-btn.playing .btn-status-dot{background:var(--green2);box-shadow:0 0 6px var(--green2)}
 .audio-btn.looping .btn-status-dot{background:var(--gold);box-shadow:0 0 6px var(--gold)}
-.btn-label{font-family:'Playfair Display',serif;font-size:14px;color:var(--cream);font-weight:700;line-height:1.3;margin-bottom:4px;word-break:break-word}
-.btn-trim-tag{font-family:'Courier Prime',monospace;font-size:8px;color:var(--gold);letter-spacing:1px;margin-bottom:4px;opacity:.8}
+.btn-label{font-family:'Playfair Display',serif;font-size:14px;color:var(--cream);font-weight:700;line-
+
+height:1.3;margin-bottom:4px;word-break:break-word}
+.btn-trim-tag{font-family:'Courier Prime',monospace;font-size:8px;color:var(--gold);letter-spacing:1px;margin-
+
+bottom:4px;opacity:.8}
 .btn-wave{height:18px;display:flex;align-items:center;gap:2px;margin-bottom:4px}
 .wave-bar{width:2px;background:var(--btn-color,var(--gold));border-radius:1px;opacity:.3;transition:opacity .2s}
 .audio-btn.playing .wave-bar{opacity:.7;animation:wave .8s ease-in-out infinite}
@@ -177,129 +285,243 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;heigh
 /* ── PER-AUDIO VOLUME ── */
 .btn-vol-row{display:flex;align-items:center;gap:6px;margin-bottom:6px}
 .btn-vol-icon{font-family:'Courier Prime',monospace;font-size:9px;color:var(--muted)}
-.btn-vol-slider{flex:1;height:2px;background:rgba(255,255,255,.1);-webkit-appearance:none;appearance:none;outline:none;cursor:pointer;border-radius:1px}
-.btn-vol-slider::-webkit-slider-thumb{-webkit-appearance:none;width:10px;height:10px;background:var(--btn-color,var(--gold));border-radius:50%;cursor:pointer}
-.btn-vol-val{font-family:'Courier Prime',monospace;font-size:8px;color:var(--muted);min-width:24px;text-align:right}
+.btn-vol-slider{flex:1;height:2px;background:rgba(255,255,255,.1);-webkit-
+
+appearance:none;appearance:none;outline:none;cursor:pointer;border-radius:1px}
+.btn-vol-slider::-webkit-slider-thumb{-webkit-appearance:none;width:10px;height:10px;background:var(--btn-
+
+color,var(--gold));border-radius:50%;cursor:pointer}
+.btn-vol-val{font-family:'Courier Prime',monospace;font-size:8px;color:var(--muted);min-width:24px;text-
+
+align:right}
 
 .btn-footer{display:flex;align-items:center;justify-content:space-between}
 .btn-duration{font-family:'Courier Prime',monospace;font-size:9px;color:var(--muted);letter-spacing:1px}
 .btn-mode-tag{font-family:'Courier Prime',monospace;font-size:9px;color:var(--muted);letter-spacing:1px}
-.loop-badge{background:var(--gold);color:var(--bg);font-family:'Courier Prime',monospace;font-size:8px;padding:1px 4px;font-weight:bold;display:none}
+.loop-badge{background:var(--gold);color:var(--bg);font-family:'Courier Prime',monospace;font-
+
+size:8px;padding:1px 4px;font-weight:bold;display:none}
 .audio-btn.looping .loop-badge{display:inline}
-.playhead{position:absolute;bottom:0;left:0;height:2px;background:var(--btn-color,var(--gold));width:0%;transition:width linear;opacity:.6}
+.playhead{position:absolute;bottom:0;left:0;height:2px;background:var(--btn-color,var(--
+
+gold));width:0%;transition:width linear;opacity:.6}
 
 /* UPLOADING STATE */
 .audio-btn.uploading .audio-btn-inner{opacity:.6}
-.upload-progress-bar{position:absolute;bottom:0;left:0;height:2px;background:var(--gold);width:0%;transition:width .3s}
+.upload-progress-bar{position:absolute;bottom:0;left:0;height:2px;background:var(--
 
-.stage-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:200px;gap:12px;opacity:.4}
+gold);width:0%;transition:width .3s}
+
+.stage-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;min-
+
+height:200px;gap:12px;opacity:.4}
 .stage-empty-icon{font-size:40px}
 .stage-empty-text{font-family:'Playfair Display',serif;font-size:16px;color:var(--muted);font-style:italic}
-.stage-empty-sub{font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
+.stage-empty-sub{font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:2px;color:var(--
+
+muted);text-transform:uppercase}
 
 /* ── MERGE PAGE ── */
 .merge-page{padding:16px;gap:16px}
 .merge-card{background:var(--bg2);border:1px solid var(--bdr2);padding:18px}
 .merge-card-title{font-family:'Playfair Display',serif;font-size:18px;color:var(--gold);margin-bottom:4px}
-.merge-card-sub{font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;padding-bottom:14px;border-bottom:1px solid var(--border);margin-bottom:16px}
+.merge-card-sub{font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:2px;color:var(--muted);text-
+
+transform:uppercase;padding-bottom:14px;border-bottom:1px solid var(--border);margin-bottom:16px}
 .merge-hint{font-size:13px;color:var(--muted);margin-bottom:12px;line-height:1.5}
-.merge-queue-area{min-height:70px;border:1px dashed var(--bdr2);padding:12px;margin-bottom:14px;display:flex;flex-wrap:wrap;gap:8px;align-items:flex-start;transition:all .2s}
+.merge-queue-area{min-height:70px;border:1px dashed var(--bdr2);padding:12px;margin-
+
+bottom:14px;display:flex;flex-wrap:wrap;gap:8px;align-items:flex-start;transition:all .2s}
 .merge-queue-area.empty{align-items:center;justify-content:center}
-.merge-queue-hint{font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;pointer-events:none}
-.merge-chip{display:flex;align-items:center;gap:6px;padding:6px 10px;background:var(--bg);border:1px solid var(--bdr2);font-size:12px;font-family:'Courier Prime',monospace;color:var(--text)}
+.merge-queue-hint{font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:2px;color:var(--
+
+muted);text-transform:uppercase;pointer-events:none}
+.merge-chip{display:flex;align-items:center;gap:6px;padding:6px 10px;background:var(--bg);border:1px solid var
+
+(--bdr2);font-size:12px;font-family:'Courier Prime',monospace;color:var(--text)}
 .merge-chip-color{width:6px;height:6px;border-radius:50%;flex-shrink:0}
-.merge-chip-remove{background:none;border:none;color:var(--muted);cursor:pointer;font-size:14px;line-height:1;padding:0 2px}
+.merge-chip-remove{background:none;border:none;color:var(--muted);cursor:pointer;font-size:14px;line-
+
+height:1;padding:0 2px}
 .merge-chip-remove:active{color:var(--red2)}
 .merge-source-list{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
-.merge-source-item{display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--bg);border:1px solid var(--border);cursor:pointer;transition:all .2s}
+.merge-source-item{display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--bg);border:1px 
+
+solid var(--border);cursor:pointer;transition:all .2s}
 .merge-source-item.selected{border-color:var(--gold);background:rgba(201,168,76,.05)}
-.merge-source-check{width:16px;height:16px;border:1px solid var(--bdr2);display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--gold);flex-shrink:0;transition:all .2s}
+.merge-source-check{width:16px;height:16px;border:1px solid var(--bdr2);display:flex;align-
+
+items:center;justify-content:center;font-size:10px;color:var(--gold);flex-shrink:0;transition:all .2s}
 .merge-source-item.selected .merge-source-check{background:var(--gold);color:var(--bg);border-color:var(--gold)}
 
 /* ── FORM ── */
-.form-label{display:block;font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
-.form-input{width:100%;background:var(--bg);border:1px solid var(--bdr2);padding:10px 14px;color:var(--text);font-family:'Crimson Pro',serif;font-size:16px;outline:none;transition:border-color .2s;margin-bottom:14px}
+.form-label{display:block;font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:2px;text-
+
+transform:uppercase;color:var(--muted);margin-bottom:8px}
+.form-input{width:100%;background:var(--bg);border:1px solid var(--bdr2);padding:10px 14px;color:var(--
+
+text);font-family:'Crimson Pro',serif;font-size:16px;outline:none;transition:border-color .2s;margin-
+
+bottom:14px}
 .form-input:focus{border-color:var(--gold)}
 .color-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:16px}
-.color-opt{aspect-ratio:1;border-radius:3px;cursor:pointer;border:2px solid transparent;transition:all .2s;position:relative}
+.color-opt{aspect-ratio:1;border-radius:3px;cursor:pointer;border:2px solid transparent;transition:all 
+
+.2s;position:relative}
 .color-opt.selected{border-color:#fff;transform:scale(1.1)}
-.color-opt.selected::after{content:'✓';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:bold}
-.btn-primary{width:100%;background:var(--gold);border:none;color:var(--bg);padding:13px;font-family:'Playfair Display',serif;font-size:15px;font-weight:700;letter-spacing:2px;cursor:pointer;transition:all .2s}
+.color-opt.selected::after{content:'✓';position:absolute;inset:0;display:flex;align-items:center;justify-
+
+content:center;color:#fff;font-size:11px;font-weight:bold}
+.btn-primary{width:100%;background:var(--gold);border:none;color:var(--bg);padding:13px;font-family:'Playfair 
+
+Display',serif;font-size:15px;font-weight:700;letter-spacing:2px;cursor:pointer;transition:all .2s}
 .btn-primary:active{background:var(--gold2);transform:scale(.99)}
 .btn-primary:disabled{opacity:.4;cursor:not-allowed}
 .progress-wrap{background:var(--border);height:3px;margin-top:10px;display:none}
 .progress-fill{height:100%;background:var(--gold);width:0%;transition:width .3s}
 
 /* ── MODAL ── */
-.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:500;display:none;align-items:flex-end;justify-content:center;backdrop-filter:blur(4px);padding:0 0 var(--safe-bot)}
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:500;display:none;align-items:flex-
+
+end;justify-content:center;backdrop-filter:blur(4px);padding:0 0 var(--safe-bot)}
 .modal-overlay.active{display:flex}
-.modal{background:var(--bg3);border:1px solid var(--bdr2);border-top:2px solid var(--gold);width:100%;max-width:500px;padding:24px 20px;max-height:92vh;overflow-y:auto;animation:slide-up .3s ease}
+.modal{background:var(--bg3);border:1px solid var(--bdr2);border-top:2px solid var(--gold);width:100%;max-
+
+width:500px;padding:24px 20px;max-height:92vh;overflow-y:auto;animation:slide-up .3s ease}
 @keyframes slide-up{from{transform:translateY(30px);opacity:0}to{transform:translateY(0);opacity:1}}
 .modal-title{font-family:'Playfair Display',serif;font-size:20px;color:var(--gold2);margin-bottom:4px}
-.modal-sub{font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--border)}
-.preview-bar{background:var(--bg2);border:1px solid var(--border);padding:10px 14px;display:flex;align-items:center;gap:10px;margin-bottom:18px}
-.preview-filename{font-family:'Courier Prime',monospace;font-size:11px;color:var(--gold);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.btn-preview{background:none;border:1px solid var(--muted);color:var(--muted);padding:5px 10px;font-family:'Courier Prime',monospace;font-size:10px;cursor:pointer;letter-spacing:1px;transition:all .2s}
+.modal-sub{font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:2px;color:var(--muted);text-
+
+transform:uppercase;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+.preview-bar{background:var(--bg2);border:1px solid var(--border);padding:10px 14px;display:flex;align-
+
+items:center;gap:10px;margin-bottom:18px}
+.preview-filename{font-family:'Courier Prime',monospace;font-size:11px;color:var(--
+
+gold);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.btn-preview{background:none;border:1px solid var(--muted);color:var(--muted);padding:5px 10px;font-
+
+family:'Courier Prime',monospace;font-size:10px;cursor:pointer;letter-spacing:1px;transition:all .2s}
 .btn-preview:active{border-color:var(--gold);color:var(--gold)}
 .mode-row{display:flex;gap:8px;margin-bottom:18px}
-.mode-opt{flex:1;background:var(--bg2);border:1px solid var(--bdr2);color:var(--muted);padding:9px;font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:1px;cursor:pointer;text-align:center;transition:all .2s;text-transform:uppercase}
+.mode-opt{flex:1;background:var(--bg2);border:1px solid var(--bdr2);color:var(--muted);padding:9px;font-
+
+family:'Courier Prime',monospace;font-size:10px;letter-spacing:1px;cursor:pointer;text-
+
+align:center;transition:all .2s;text-transform:uppercase}
 .mode-opt.active{background:var(--gold);border-color:var(--gold);color:var(--bg)}
 .modal-actions{display:flex;gap:10px;margin-top:6px}
-.btn-cancel{background:none;border:1px solid var(--bdr2);color:var(--muted);padding:12px 18px;font-family:'Courier Prime',monospace;font-size:10px;cursor:pointer;letter-spacing:1px;transition:all .2s}
+.btn-cancel{background:none;border:1px solid var(--bdr2);color:var(--muted);padding:12px 18px;font-
+
+family:'Courier Prime',monospace;font-size:10px;cursor:pointer;letter-spacing:1px;transition:all .2s}
 .btn-cancel:active{border-color:var(--muted);color:var(--text)}
-.btn-confirm{flex:1;background:var(--gold);border:none;color:var(--bg);padding:12px;font-family:'Playfair Display',serif;font-size:14px;font-weight:700;cursor:pointer;letter-spacing:2px;transition:all .2s}
+.btn-confirm{flex:1;background:var(--gold);border:none;color:var(--bg);padding:12px;font-family:'Playfair 
+
+Display',serif;font-size:14px;font-weight:700;cursor:pointer;letter-spacing:2px;transition:all .2s}
 .btn-confirm:active{background:var(--gold2)}
 
 /* ── FOLDER MODAL ── */
 .folder-select-row{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
-.folder-sel-opt{flex:1;min-width:80px;background:var(--bg2);border:1px solid var(--bdr2);color:var(--muted);padding:8px 6px;font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:1px;cursor:pointer;text-align:center;transition:all .2s;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.folder-sel-opt{flex:1;min-width:80px;background:var(--bg2);border:1px solid var(--bdr2);color:var(--
+
+muted);padding:8px 6px;font-family:'Courier Prime',monospace;font-size:9px;letter-
+
+spacing:1px;cursor:pointer;text-align:center;transition:all .2s;text-transform:uppercase;white-
+
+space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .folder-sel-opt.active{background:var(--bdr2);border-color:var(--gold);color:var(--gold)}
 
 /* ── AUDIO EDITOR ── */
 .editor-section{margin-bottom:18px}
-.editor-title{font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border)}
-.waveform-container{position:relative;background:var(--bg);border:1px solid var(--bdr2);height:80px;margin-bottom:12px;overflow:hidden;touch-action:none}
+.editor-title{font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:2px;color:var(--gold);text-
+
+transform:uppercase;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.waveform-container{position:relative;background:var(--bg);border:1px solid var(--bdr2);height:80px;margin-
+
+bottom:12px;overflow:hidden;touch-action:none}
 .waveform-canvas{width:100%;height:100%;display:block}
-.trim-overlay{position:absolute;top:0;height:100%;background:rgba(201,168,76,.12);border-left:2px solid var(--gold);border-right:2px solid var(--gold);pointer-events:none}
-.trim-handle{position:absolute;top:0;width:22px;height:100%;background:rgba(201,168,76,.7);cursor:ew-resize;display:flex;align-items:center;justify-content:center;pointer-events:all}
+.trim-overlay{position:absolute;top:0;height:100%;background:rgba(201,168,76,.12);border-left:2px solid var(--
+
+gold);border-right:2px solid var(--gold);pointer-events:none}
+.trim-handle{position:absolute;top:0;width:22px;height:100%;background:rgba(201,168,76,.7);cursor:ew-
+
+resize;display:flex;align-items:center;justify-content:center;pointer-events:all}
 .trim-handle-left{left:-11px}
 .trim-handle-right{right:-11px}
 .trim-handle-line{width:2px;height:50%;background:var(--bg);border-radius:1px}
 .trim-info-row{display:flex;gap:8px;align-items:center;margin-bottom:12px}
 .trim-field{flex:1}
-.trim-field-label{font-family:'Courier Prime',monospace;font-size:8px;letter-spacing:1px;color:var(--muted);text-transform:uppercase;margin-bottom:4px}
-.trim-input{width:100%;background:var(--bg);border:1px solid var(--bdr2);padding:7px 10px;color:var(--text);font-family:'Courier Prime',monospace;font-size:13px;outline:none;text-align:center;transition:border-color .2s}
+.trim-field-label{font-family:'Courier Prime',monospace;font-size:8px;letter-spacing:1px;color:var(--
+
+muted);text-transform:uppercase;margin-bottom:4px}
+.trim-input{width:100%;background:var(--bg);border:1px solid var(--bdr2);padding:7px 10px;color:var(--
+
+text);font-family:'Courier Prime',monospace;font-size:13px;outline:none;text-align:center;transition:border-
+
+color .2s}
 .trim-input:focus{border-color:var(--gold)}
-.trim-duration-display{font-family:'Courier Prime',monospace;font-size:10px;color:var(--gold);text-align:center;padding:6px;background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.2);letter-spacing:1px}
+.trim-duration-display{font-family:'Courier Prime',monospace;font-size:10px;color:var(--gold);text-
+
+align:center;padding:6px;background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.2);letter-
+
+spacing:1px}
 .trim-btn-row{display:flex;gap:8px;margin-top:12px}
-.btn-secondary{flex:1;background:var(--bg2);border:1px solid var(--bdr2);color:var(--muted);padding:8px;font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:1px;cursor:pointer;transition:all .2s;text-transform:uppercase;text-align:center}
+.btn-secondary{flex:1;background:var(--bg2);border:1px solid var(--bdr2);color:var(--muted);padding:8px;font-
+
+family:'Courier Prime',monospace;font-size:9px;letter-spacing:1px;cursor:pointer;transition:all .2s;text-
+
+transform:uppercase;text-align:center}
 .btn-secondary:active{border-color:var(--gold);color:var(--gold)}
 
 /* ── SHEET ── */
-.sheet-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:400;display:none;align-items:flex-end;justify-content:center;padding-bottom:var(--safe-bot)}
+.sheet-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:400;display:none;align-items:flex-
+
+end;justify-content:center;padding-bottom:var(--safe-bot)}
 .sheet-overlay.active{display:flex}
-.sheet{background:var(--bg3);border:1px solid var(--bdr2);border-top:2px solid var(--gold);width:100%;max-width:500px;padding:8px 0 12px;animation:slide-up .25s ease}
-.sheet-title{font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:3px;color:var(--muted);text-transform:uppercase;padding:8px 20px 14px}
-.sheet-item{display:flex;align-items:center;gap:12px;padding:14px 20px;cursor:pointer;transition:background .15s;border:none;background:none;width:100%;text-align:left;font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:1px;color:var(--text);text-transform:uppercase}
+.sheet{background:var(--bg3);border:1px solid var(--bdr2);border-top:2px solid var(--gold);width:100%;max-
+
+width:500px;padding:8px 0 12px;animation:slide-up .25s ease}
+.sheet-title{font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:3px;color:var(--muted);text-
+
+transform:uppercase;padding:8px 20px 14px}
+.sheet-item{display:flex;align-items:center;gap:12px;padding:14px 20px;cursor:pointer;transition:background 
+
+.15s;border:none;background:none;width:100%;text-align:left;font-family:'Courier Prime',monospace;font-
+
+size:12px;letter-spacing:1px;color:var(--text);text-transform:uppercase}
 .sheet-item:active{background:rgba(201,168,76,.08)}
 .sheet-item.danger{color:var(--red2)}
 .sheet-item .si-icon{font-size:16px;width:22px;text-align:center}
 .sheet-divider{height:1px;background:var(--border);margin:4px 0}
 
 /* ── STATUSBAR ── */
-.statusbar{flex-shrink:0;padding:6px 16px;background:var(--bg2);border-top:1px solid var(--border);display:flex;align-items:center;gap:10px}
-.status-dot{width:6px;height:6px;border-radius:50%;background:var(--green2);box-shadow:0 0 5px var(--green2);flex-shrink:0}
-.status-txt{font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:1px;color:var(--muted);text-transform:uppercase;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.statusbar{flex-shrink:0;padding:6px 16px;background:var(--bg2);border-top:1px solid var(--
+
+border);display:flex;align-items:center;gap:10px}
+.status-dot{width:6px;height:6px;border-radius:50%;background:var(--green2);box-shadow:0 0 5px var(--
+
+green2);flex-shrink:0}
+.status-txt{font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:1px;color:var(--muted);text-
+
+transform:uppercase;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .status-count{font-family:'Courier Prime',monospace;font-size:9px;color:var(--gold);letter-spacing:1px}
 
 /* ── TOAST ── */
-.toast-wrap{position:fixed;top:calc(var(--safe-top) + 60px);left:12px;right:12px;z-index:1000;display:flex;flex-direction:column;gap:6px;pointer-events:none}
-.toast{background:var(--bg3);border:1px solid var(--bdr2);border-left:3px solid var(--gold);padding:10px 14px;font-family:'Courier Prime',monospace;font-size:11px;letter-spacing:1px;color:var(--text);transition:all .3s}
+.toast-wrap{position:fixed;top:calc(var(--safe-top) + 60px);left:12px;right:12px;z-
+
+index:1000;display:flex;flex-direction:column;gap:6px;pointer-events:none}
+.toast{background:var(--bg3);border:1px solid var(--bdr2);border-left:3px solid var(--gold);padding:10px 
+
+14px;font-family:'Courier Prime',monospace;font-size:11px;letter-spacing:1px;color:var(--text);transition:all 
+
+.3s}
 .toast.success{border-left-color:var(--green2)}
 .toast.error{border-left-color:var(--red2)}
 
 /* ── SPINNER ── */
-.spinner{display:inline-block;width:14px;height:14px;border:2px solid var(--bdr2);border-top-color:var(--gold);border-radius:50%;animation:spin .6s linear infinite;vertical-align:middle;margin-right:6px}
+.spinner{display:inline-block;width:14px;height:14px;border:2px solid var(--bdr2);border-top-color:var(--
+
+gold);border-radius:50%;animation:spin .6s linear infinite;vertical-align:middle;margin-right:6px}
 @keyframes spin{to{transform:rotate(360deg)}}
 </style>
 </head>
@@ -321,11 +543,15 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;heigh
     <div class="auth-form" id="loginForm">
       <div class="auth-field">
         <label class="auth-label">Email</label>
-        <input type="email" class="auth-input" id="loginEmail" placeholder="email@anda.com" autocomplete="email">
+        <input type="email" class="auth-input" id="loginEmail" placeholder="email@anda.com" 
+
+autocomplete="email">
       </div>
       <div class="auth-field">
         <label class="auth-label">Password</label>
-        <input type="password" class="auth-input" id="loginPassword" placeholder="Password..." autocomplete="current-password">
+        <input type="password" class="auth-input" id="loginPassword" placeholder="Password..." 
+
+autocomplete="current-password">
       </div>
       <button class="auth-btn" id="loginBtn" onclick="doLogin()">MASUK ✦</button>
       <div class="auth-err" id="loginErr"></div>
@@ -339,11 +565,15 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;heigh
       </div>
       <div class="auth-field">
         <label class="auth-label">Password</label>
-        <input type="password" class="auth-input" id="regPassword" placeholder="Min. 6 karakter" autocomplete="new-password">
+        <input type="password" class="auth-input" id="regPassword" placeholder="Min. 6 karakter" 
+
+autocomplete="new-password">
       </div>
       <div class="auth-field">
         <label class="auth-label">Konfirmasi Password</label>
-        <input type="password" class="auth-input" id="regPassword2" placeholder="Ulangi password..." autocomplete="new-password">
+        <input type="password" class="auth-input" id="regPassword2" placeholder="Ulangi password..." 
+
+autocomplete="new-password">
       </div>
       <button class="auth-btn" id="registerBtn" onclick="doRegister()">DAFTAR AKUN ✦</button>
       <div class="auth-err" id="registerErr"></div>
@@ -446,10 +676,14 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;heigh
         <div class="merge-card">
           <div class="merge-card-title">⊕ Merge Composer</div>
           <div class="merge-card-sub">Gabungkan audio menjadi satu tombol</div>
-          <div class="merge-hint">Pilih audio di bawah, susun urutan, lalu gabungkan menjadi satu tombol baru.</div>
+          <div class="merge-hint">Pilih audio di bawah, susun urutan, lalu gabungkan menjadi satu tombol 
+
+baru.</div>
           <div class="form-label">Pilih Audio (min. 2)</div>
           <div class="merge-source-list" id="mergeSourceList">
-            <div style="font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:2px;color:var(--muted);text-align:center;padding:16px;text-transform:uppercase;opacity:.5">Belum ada audio</div>
+            <div style="font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:2px;color:var(--
+
+muted);text-align:center;padding:16px;text-transform:uppercase;opacity:.5">Belum ada audio</div>
           </div>
           <div class="form-label">Urutan Gabungan</div>
           <div class="merge-queue-area empty" id="mergeQueueArea">
@@ -459,7 +693,9 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;heigh
           <input type="text" class="form-input" id="mergeLabelInput" placeholder="Nama tombol gabungan...">
           <div class="form-label">Warna</div>
           <div class="color-grid" id="mergeColorGrid"></div>
-          <button class="btn-primary" id="btnMergeExec" onclick="executeMerge()" disabled>⊕ GABUNGKAN AUDIO</button>
+          <button class="btn-primary" id="btnMergeExec" onclick="executeMerge()" disabled>⊕ GABUNGKAN 
+
+AUDIO</button>
           <div class="progress-wrap" id="mergeProgressWrap">
             <div class="progress-fill" id="mergeProgressFill"></div>
           </div>
@@ -493,7 +729,9 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;heigh
     <input type="text" class="form-input" id="audioLabelInput" placeholder="Nama audio..." maxlength="40">
     <div class="form-label">Folder / Babak</div>
     <div class="folder-select-row" id="folderSelectRow">
-      <div style="font-family:'Courier Prime',monospace;font-size:9px;color:var(--muted);letter-spacing:1px">— Belum ada folder —</div>
+      <div style="font-family:'Courier Prime',monospace;font-size:9px;color:var(--muted);letter-spacing:1px">— 
+
+Belum ada folder —</div>
     </div>
     <div class="form-label">Mode Default</div>
     <div class="mode-row">
@@ -517,7 +755,9 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;heigh
     <div class="modal-title" id="folderModalTitle">＋ Tambah Folder</div>
     <div class="modal-sub">Buat kelompok babak atau keperluan panggung</div>
     <div class="form-label">Nama Folder / Babak</div>
-    <input type="text" class="form-input" id="folderNameInput" placeholder="Contoh: Babak 1, Intermission..." maxlength="30">
+    <input type="text" class="form-input" id="folderNameInput" placeholder="Contoh: Babak 1, Intermission..." 
+
+maxlength="30">
     <div class="form-label">Warna Folder</div>
     <div class="color-grid" id="folderColorGrid"></div>
     <div class="modal-actions">
@@ -550,12 +790,16 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;heigh
       <div class="trim-info-row">
         <div class="trim-field">
           <div class="trim-field-label">Mulai (detik)</div>
-          <input type="number" class="trim-input" id="trimStartInput" min="0" step="0.1" value="0" oninput="trimInputChanged()">
+          <input type="number" class="trim-input" id="trimStartInput" min="0" step="0.1" value="0" 
+
+oninput="trimInputChanged()">
         </div>
         <div style="padding-top:20px;color:var(--muted);font-size:18px">→</div>
         <div class="trim-field">
           <div class="trim-field-label">Selesai (detik)</div>
-          <input type="number" class="trim-input" id="trimEndInput" min="0" step="0.1" value="0" oninput="trimInputChanged()">
+          <input type="number" class="trim-input" id="trimEndInput" min="0" step="0.1" value="0" 
+
+oninput="trimInputChanged()">
         </div>
       </div>
       <div class="trim-duration-display" id="trimDurationDisplay">Durasi: 0:00</div>
@@ -577,16 +821,28 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;heigh
 <div class="sheet-overlay" id="sheetOverlay" onclick="closeSheet()">
   <div class="sheet" onclick="event.stopPropagation()">
     <div class="sheet-title" id="sheetTitle">— opsi —</div>
-    <button class="sheet-item" onclick="sheetAction('once')"><span class="si-icon">▶</span> Putar Sekali</button>
+    <button class="sheet-item" onclick="sheetAction('once')"><span class="si-icon">▶</span> Putar 
+
+Sekali</button>
     <button class="sheet-item" onclick="sheetAction('loop')"><span class="si-icon">↻</span> Putar Ulang</button>
     <button class="sheet-item" onclick="sheetAction('stop')"><span class="si-icon">■</span> Stop</button>
     <div class="sheet-divider"></div>
-    <button class="sheet-item" onclick="sheetAction('edit')"><span class="si-icon">✂</span> Edit / Potong Audio</button>
-    <button class="sheet-item" onclick="sheetAction('rename')"><span class="si-icon">✎</span> Ganti Nama</button>
-    <button class="sheet-item" onclick="sheetAction('moveFolder')"><span class="si-icon">📂</span> Pindah Folder</button>
-    <button class="sheet-item" onclick="sheetAction('addMerge')"><span class="si-icon">⊕</span> Tambah ke Merge</button>
+    <button class="sheet-item" onclick="sheetAction('edit')"><span class="si-icon">✂</span> Edit / Potong 
+
+Audio</button>
+    <button class="sheet-item" onclick="sheetAction('rename')"><span class="si-icon">✎</span> Ganti 
+
+Nama</button>
+    <button class="sheet-item" onclick="sheetAction('moveFolder')"><span class="si-icon">📂</span> Pindah 
+
+Folder</button>
+    <button class="sheet-item" onclick="sheetAction('addMerge')"><span class="si-icon">⊕</span> Tambah ke 
+
+Merge</button>
     <div class="sheet-divider"></div>
-    <button class="sheet-item danger" onclick="sheetAction('delete')"><span class="si-icon">✕</span> Hapus</button>
+    <button class="sheet-item danger" onclick="sheetAction('delete')"><span class="si-icon">✕</span> 
+
+Hapus</button>
   </div>
 </div>
 
@@ -596,7 +852,9 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;heigh
 <div class="sheet-overlay" id="userSheetOverlay" onclick="closeUserSheet()">
   <div class="sheet" onclick="event.stopPropagation()">
     <div class="sheet-title" id="userSheetEmail">— akun —</div>
-    <button class="sheet-item danger" onclick="doLogout()"><span class="si-icon">⇥</span> Keluar / Logout</button>
+    <button class="sheet-item danger" onclick="doLogout()"><span class="si-icon">⇥</span> Keluar / 
+
+Logout</button>
   </div>
 </div>
 
@@ -613,7 +871,11 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;heigh
 
 // ── SUPABASE CONFIG ──
 const SB_URL = 'https://obgmvkhesftxsfoukuhm.supabase.co';
-const SB_KEY = 'sb_publishable_fpknvLmGs5yjCk55dLXy9g_nCKIChj5';
+const SB_KEY = 
+
+'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9iZ212a2hlc2Z0eHNmb3VrdWhtIiwicm9sZSI6Im
+
+Fub24iLCJpYXQiOjE3Nzc1OTk4MTEsImV4cCI6MjA5MzE3NTgxMX0.eYfXRpjAz36brpn7jVtHDLexomAuENmKW7dmuZl1dX8';
 
 let currentUser  = null;
 let authToken    = null;
@@ -731,7 +993,9 @@ async function doRegister() {
     } else if (msg.toLowerCase().includes('already registered')) {
       errEl.textContent = 'Email sudah terdaftar. Silakan masuk.';
     } else if (msg.toLowerCase().includes('not confirmed')) {
-      errEl.textContent = 'Akun terdaftar tapi belum dikonfirmasi. Matikan konfirmasi email di Supabase lalu coba login.';
+      errEl.textContent = 'Akun terdaftar tapi belum dikonfirmasi. Matikan konfirmasi email di Supabase lalu 
+
+coba login.';
     } else {
       errEl.textContent = 'Daftar gagal: ' + msg;
     }
@@ -987,7 +1251,9 @@ function previewAudio() {
   src.connect(g); g.connect(ctx.destination); src.start();
   pendingPreviewSrc = src;
   document.getElementById('btnPreview').textContent = '■ STOP';
-  src.onended = () => { pendingPreviewSrc = null; document.getElementById('btnPreview').textContent = '▶ PREVIEW'; };
+  src.onended = () => { pendingPreviewSrc = null; document.getElementById('btnPreview').textContent = '▶ 
+
+PREVIEW'; };
 }
 
 async function confirmUpload() {
@@ -1032,7 +1298,9 @@ function renderLibrary() {
   const el = document.getElementById('libList');
   document.getElementById('libCount').textContent = audioData.length + ' file';
   if (!audioData.length) {
-    el.innerHTML = '<div class="lib-empty"><div class="lib-empty-icon">🎼</div><div class="lib-empty-text">Belum ada audio</div></div>';
+    el.innerHTML = '<div class="lib-empty"><div class="lib-empty-icon">🎼</div><div class="lib-empty-text">Belum 
+
+ada audio</div></div>';
     return;
   }
   el.innerHTML = audioData.map(a => {
@@ -1043,7 +1311,9 @@ function renderLibrary() {
       <div class="lib-item-color" style="background:${a.color}"></div>
       <div class="lib-item-info">
         <div class="lib-item-name">${a.name}</div>
-        <div class="lib-item-meta">${fmtDur((a.trimEnd||a.duration)-(a.trimStart||0))} · ${a.mode==='loop'?'↻ ULANG':'▶ SEKALI'}${a.isMerged?' · GABUNGAN':''}${folder?' · 📂 '+folder.name:''}</div>
+        <div class="lib-item-meta">${fmtDur((a.trimEnd||a.duration)-(a.trimStart||0))} · ${a.mode==='loop'?'↻ 
+
+ULANG':'▶ SEKALI'}${a.isMerged?' · GABUNGAN':''}${folder?' · 📂 '+folder.name:''}</div>
         ${hasTrim?`<div class="lib-item-trim">✂ ${fmtDur(a.trimStart)} → ${fmtDur(a.trimEnd)}</div>`:''}
       </div>
       <div class="lib-item-actions">
@@ -1112,8 +1382,12 @@ function renderStage() {
         <span class="folder-name">${folder.name}</span>
         <span class="folder-count">${folderAudio.length} audio</span>
         <div class="folder-actions" onclick="event.stopPropagation()">
-          <button class="btn-icon" onclick="openFolderModal('${folder.id}')" style="padding:4px 8px;font-size:11px">✎</button>
-          <button class="btn-icon danger" onclick="deleteFolder('${folder.id}')" style="padding:4px 8px;font-size:11px">✕</button>
+          <button class="btn-icon" onclick="openFolderModal('${folder.id}')" style="padding:4px 8px;font-
+
+size:11px">✎</button>
+          <button class="btn-icon danger" onclick="deleteFolder('${folder.id}')" style="padding:4px 8px;font-
+
+size:11px">✕</button>
         </div>
       </div>
       <div class="folder-body ${isOpen?'open':''}" id="fbody_${folder.id}">
@@ -1125,7 +1399,11 @@ function renderStage() {
         folderAudio.map((a, i) => buildAudioBtn(a, i)).join('');
     } else {
       document.getElementById('fgrid_' + folder.id).innerHTML =
-        `<div style="grid-column:1/-1;padding:12px;font-family:'Courier Prime',monospace;font-size:9px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;text-align:center;opacity:.5">— Folder kosong —</div>`;
+        `<div style="grid-column:1/-1;padding:12px;font-family:'Courier Prime',monospace;font-
+
+size:9px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;text-align:center;opacity:.5">— Folder 
+
+kosong —</div>`;
     }
   });
 
@@ -1222,7 +1500,9 @@ function triggerAudio(id) {
   if (!a.buffer) { toast('Audio sedang dimuat...', 'default'); return; }
   const eff = globalMode || a.mode;
   const btn = document.getElementById('btn_' + id);
-  if (btn && (btn.classList.contains('playing') || btn.classList.contains('looping'))) { stopAudio(id); return; }
+  if (btn && (btn.classList.contains('playing') || btn.classList.contains('looping'))) { stopAudio(id); return; 
+
+}
   stopAudio(id, false);
   const ctx = getCtx();
   const src = ctx.createBufferSource();
@@ -1245,7 +1525,9 @@ function triggerAudio(id) {
   };
 }
 function stopAudio(id, msg=true) {
-  if (activeAudioSources[id]) { try { activeAudioSources[id].source.stop(); } catch(e){} delete activeAudioSources[id]; }
+  if (activeAudioSources[id]) { try { activeAudioSources[id].source.stop(); } catch(e){} delete 
+
+activeAudioSources[id]; }
   const btn = document.getElementById('btn_' + id);
   if (btn) btn.classList.remove('playing','looping');
   resetPH(id); if (msg) setStatus('Dihentikan', 'ok');
@@ -1438,14 +1720,18 @@ function setupTrimHandles() {
     el.addEventListener('touchstart', e => {
       e.preventDefault();
       const mv = ev => onMove(ev.touches[0].clientX);
-      const up = () => { document.removeEventListener('touchmove',mv); document.removeEventListener('touchend',up); };
+      const up = () => { document.removeEventListener('touchmove',mv); document.removeEventListener
+
+('touchend',up); };
       document.addEventListener('touchmove', mv, { passive:false });
       document.addEventListener('touchend',  up);
     }, { passive:false });
     el.addEventListener('mousedown', e => {
       e.preventDefault();
       const mv = ev => onMove(ev.clientX);
-      const up = () => { document.removeEventListener('mousemove',mv); document.removeEventListener('mouseup',up); };
+      const up = () => { document.removeEventListener('mousemove',mv); document.removeEventListener
+
+('mouseup',up); };
       document.addEventListener('mousemove', mv);
       document.addEventListener('mouseup',   up);
     });
@@ -1460,7 +1746,11 @@ function setupTrimHandles() {
 function renderMergeSourceList() {
   const el = document.getElementById('mergeSourceList');
   if (!audioData.length) {
-    el.innerHTML = '<div style="font-family:\'Courier Prime\',monospace;font-size:9px;letter-spacing:2px;color:var(--muted);text-align:center;padding:16px;text-transform:uppercase;opacity:.5">Belum ada audio di library</div>';
+    el.innerHTML = '<div style="font-family:\'Courier Prime\',monospace;font-size:9px;letter-
+
+spacing:2px;color:var(--muted);text-align:center;padding:16px;text-transform:uppercase;opacity:.5">Belum ada 
+
+audio di library</div>';
     return;
   }
   el.innerHTML = audioData.map(a => `
@@ -1469,8 +1759,12 @@ function renderMergeSourceList() {
       <div class="merge-source-check">${mergeSelectedIds.includes(a.id)?'✓':''}</div>
       <div style="width:8px;height:8px;border-radius:50%;background:${a.color};flex-shrink:0"></div>
       <div style="flex:1;min-width:0">
-        <div style="font-size:14px;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${a.name}</div>
-        <div style="font-family:'Courier Prime',monospace;font-size:9px;color:var(--muted);letter-spacing:1px">${fmtDur((a.trimEnd||a.duration)-(a.trimStart||0))}</div>
+        <div style="font-size:14px;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-
+
+space:nowrap">${a.name}</div>
+        <div style="font-family:'Courier Prime',monospace;font-size:9px;color:var(--muted);letter-spacing:1px">
+
+${fmtDur((a.trimEnd||a.duration)-(a.trimStart||0))}</div>
       </div>
     </div>
   `).join('');
@@ -1857,7 +2151,9 @@ window.addEventListener('load', () => {
   }
   // Enter key support untuk login/register
   document.getElementById('loginPassword').addEventListener('keydown', e => { if(e.key==='Enter') doLogin(); });
-  document.getElementById('regPassword2').addEventListener('keydown',  e => { if(e.key==='Enter') doRegister(); });
+  document.getElementById('regPassword2').addEventListener('keydown',  e => { if(e.key==='Enter') doRegister(); 
+
+});
 });
 
 // Service Worker
